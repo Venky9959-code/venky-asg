@@ -1,6 +1,0 @@
-1. Html +css using all tags
-2. CSS-Bootstrap
-3.Portfolio
-4.certificates
-5.Student Record Manager
-6.Create a form and save the file using Django.
