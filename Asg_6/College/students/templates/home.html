@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Django</title>
+</head>
+<style>
+    body {
+        background: lightcyan;
+    }
+
+    h1 {
+        color: blue;
+        border: 4px solid yellow;
+        margin-top: 100px;
+        margin-left: 500px;
+        margin-right: 500px;
+        padding: 5px;
+    }
+
+    h2 {
+        color: brown;
+    }
+
+    p {
+        color: green;
+    }
+
+    li {
+        color: red;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .text_box {
+        background-color: green;
+        text-decoration: solid;
+        margin-left: 300px;
+        margin-right: 250px;
+        padding: 3px;
+        text-shadow: 5px 5px 5px red;
+
+    }
+
+    .id {
+        color: black;
+    }
+
+    .mar {
+        background-color: orange;
+        color: white;
+        padding: 5px;
+        margin-left: 300px;
+        margin-right: 250px;
+    }
+
+    .float-top {
+        position: relative;
+        animation: dropDown 3s ease-in-out forwards;
+        color: blue;
+        text-align: center;
+        text-shadow: 5px 5px 5px gray;
+    }
+
+    button:hover {
+        background: linear-gradient(90deg, #0056b3, #0096c7);
+    }
+
+    button {
+        background-color: blue;
+        color: white;
+    }
+
+    @keyframes dropDown {
+        from {
+            top: -100px;
+            opacity: 0;
+        }
+
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    .form_box {
+        margin-left: 550px;
+        margin-right: 550px;
+        padding: 3px;
+        display: flexbox;
+        text-align: center;
+        background-color: gold;
+        border: 4px solid orange;
+        border-radius: 20px;
+
+    }
+
+    #name,
+    #email,
+    #password {
+        border: 2px solid green;
+    }
+</style>
+
+<body>
+    <h1 class="float-top">Welcome to Django</h1>
+    <p class="center-text">This is a simple web page created using Django.</p>
+    <p class="center-text">My name is {{name}}</p> <br><br>
+
+    <marquee direction="left" scrollamount="150" behaviour="alternate" class="mar">
+        Hello Banavathu! Welcome Onboard!...
+    </marquee> <br><br>
+
+
+    <div style="text-align: center;" class="text_box">
+        <p class="id">I am from {{place}}</p>
+        <p class="id">My hobby is {{hobby}}</p>
+        <p class="id">My favorite fruits are:</p>
+        <p class="id">My favorite number is {{favnum}}</p>
+        <p class="id">My favorite fruit is {{favfruit}}</p>
+
+    </div><br><br>
+
+    <div class="form_box">
+
+        <h2>Registration Form </h2>
+
+        <form method="POST">
+    {% csrf_token %}
+
+    <label>First Name</label><br>
+    <input type="text" name="firstname" required><br><br>
+
+    <label>Last Name</label><br>
+    <input type="text" name="lastname" required><br><br>
+
+    <label>Email</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Phone Number</label><br>
+    <input type="text" name="phone" required><br><br>
+
+    <label>Password</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <label>Date of Birth</label><br>
+    <input type="date" name="dob"><br><br>
+
+
+    <label>State</label><br>
+    <input type="text" name="state"><br><br>
+
+    <label>Country</label><br>
+    <input type="text" name="country"><br><br>
+
+    <label>Qualification</label><br>
+    <select name="qualification">
+        <option>B.Tech</option>
+        <option>B.Sc</option>
+        <option>BCA</option>
+        <option>MCA</option>
+        <option>M.Tech</option>
+    </select><br><br>
+
+    <label>Branch</label><br>
+    <input type="text" name="branch"><br><br>
+
+
+    <label>Gender</label><br>
+
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input type="radio" name="gender" value="Other">Other
+
+    <br><br>
+
+    <button type="submit">Register</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+    </div>
+
+    {% if success %}
+<script>
+    alert(
+        "🎉 Registration Successful!\n\n" +
+        "Name: {{ firstname }} {{ lastname }}\n" +
+        "Email: {{ email }}\n" +
+        "Phone: {{ phone }}\n" +
+        "Gender: {{ gender }}"
+    );
+</script>
+{% endif %}
+
+</body>
+
+</html>
