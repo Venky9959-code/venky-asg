@@ -1,709 +1,200 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Demo</title>
 
-<title>Banavathu Venkateswara Rao | Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
 
-<!-- AOS Animation -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- CSS -->
-<link rel="stylesheet" href="./style.css">
+        h2{color:Black;
+           border:3px solid lightblue;}
+        p{color:green;}
+        #about{color:purple;}
+    </style>
 </head>
 
 <body>
 
-<!-- Cursor Glow -->
-<div class="cursor-glow"></div>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to HTML</h1>
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#table">Table</a> |
+            <a href="#form">Form</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Section -->
+        <section id="about">
+            <h2>About HTML</h2>
+
+            <p>
+                HTML stands for <strong>HyperText Markup Language</strong>.
+                It is used to create <em>web pages</em>.
+            </p>
+
+            <p>
+                You can use <mark>highlighting</mark>,
+                <b>bold</b>,
+                <i>italic</i>,
+                H<sub>2</sub>O,
+                x<sup>2</sup>.
+            </p>
+
+            <blockquote>
+                HTML is the foundation of every website.
+            </blockquote>
+
+            <img src="image.jpg" alt="Sample Image" width="200">
+
+            <figure>
+                <img src="image.jpg" alt="Example" width="150">
+                <figcaption>Sample Figure Caption</figcaption>
+            </figure>
+        </section>
+
+        <!-- Lists -->
+        <section>
+            <h2>Lists</h2>
+
+            <h3>Unordered List</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Learn HTML</li>
+                <li>Learn CSS</li>
+                <li>Learn JS</li>
+            </ol>
+
+            <h3>Description List</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Structure of web page</dd>
+            </dl>
+        </section>
+
+        <!-- Table -->
+        <section id="table">
+            <h2>Student Table</h2>
+
+            <table>
+                <caption>Student Data</caption>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Venky</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Akhil</td>
+                        <td>22</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Form -->
+        <section id="form">
+            <h2>Registration Form</h2>
+
+            <form>
 
-<!-- Loader -->
-<div id="loader">
-<div class="spinner"></div>
-</div>
+                <label>Name:</label>
+                <input type="text"><br><br>
 
-<!-- Back To Top -->
-<button id="topBtn">
-<i class="fas fa-arrow-up"></i>
-</button>
+                <label>Email:</label>
+                <input type="email"><br><br>
 
-<!-- Navbar -->
+                <label>Message:</label><br>
+                <textarea rows="4" cols="30"></textarea><br><br>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+                <label>Course:</label>
+                <select>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                </select><br><br>
 
-<div class="container">
+                <input type="checkbox"> Accept Terms<br><br>
 
-<a class="navbar-brand fw-bold logo" href="#">
-VRAO
-</a>
+                <button type="submit">Submit</button>
 
-<button class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#menu">
+            </form>
+        </section>
 
-<span class="navbar-toggler-icon"></span>
+        <!-- Media -->
+        <section>
+            <h2>Media</h2>
 
-</button>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
 
-<div class="collapse navbar-collapse" id="menu">
+            <br><br>
 
-<ul class="navbar-nav ms-auto">
+            <video width="300" controls>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </section>
 
-<li class="nav-item">
-<a href="#home" class="nav-link">Home</a>
-</li>
+        <!-- Details -->
+        <section>
+            <details>
+                <summary>Click to read more</summary>
+                <p>This content is hidden until opened.</p>
+            </details>
+        </section>
 
-<li class="nav-item">
-<a href="#about" class="nav-link">About</a>
-</li>
+        <!-- Aside -->
+        <aside>
+            <h3>Related Links</h3>
+            <a href="#">HTML Tutorial</a>
+        </aside>
 
-<li class="nav-item">
-<a href="#skills" class="nav-link">Skills</a>
-</li>
+    </main>
 
-<li class="nav-item">
-<a href="#projects" class="nav-link">Projects</a>
-</li>
+    <hr>
 
-<li class="nav-item">
-<a href="#stats" class="nav-link">Achievements</a>
-</li>
+    <!-- Footer -->
+    <footer>
+        <address>
+            Contact: example@email.com
+        </address>
 
-<li class="nav-item">
-<a href="#contact" class="nav-link">Contact</a>
-</li>
-
-<li class="nav-item ms-lg-3">
-    <button id="theme-btn" class="theme-btn" type="button" aria-label="Toggle Theme">
-        <i class="fa-solid fa-moon"></i>
-    </button>
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</nav>
-
-<!-- Hero Section -->
-
-<section id="home" class="hero">
-
-<div class="particles"></div>
-
-<div class="container">
-
-<div class="row align-items-center">
-
-<div class="col-lg-6 hero-content"
-data-aos="fade-right">
-
-<h5 class="hero-small">
-HELLO I'M
-</h5>
-
-<h1>
-Banavathu
-<span>Venkateswara Rao</span>
-</h1>
-
-<h2>
-<span id="typing"></span>
-</h2>
-
-<p>
-Computer Science Engineer • Full Stack Developer • Entrepreneur • Founder of SkillsBoostHub
-</p>
-
-<div class="hero-buttons">
-
-<a href="#contact"
-class="btn btn-primary me-3 glow-btn">
-
-Hire Me
-</a>
-
-<a href="./resume.pdf"
-class="btn btn-outline-light">
-
-Download Resume
-
-</a>
-
-</div>
-
-<div class="social-icons mt-4">
-
-<a href="https://github.com/Venky9959-code" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-<a href="https://www.linkedin.com/in/venky-banavathu-2377082a3" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-
-</div>
-
-</div>
-
-<div class="col-lg-6 text-center"
-data-aos="fade-left">
-
-<div class="profile-wrapper">
-
-<img src="profile.jpg"
-alt="Banavathu Venkateswararao profile"
-class="profile-img">
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- About -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="section-header text-center">
-
-<h2 class="section-title">
-About Me
-</h2>
-
-<div class="line"></div>
-
-</div>
-
-<div class="col-lg-12">
-
-<div class="about-content text-center">
-
-<h3>Who Am I?</h3>
-
-<p style="text-align: center;">
-I am a passionate Computer Science Engineering student at
-Velagapudi Ramakrishna Siddhartha Engineering College,
-specializing in Full Stack Development, ASP.NET MVC,
-Firebase, SQL Server and Machine Learning.
-</p>
-
-<p style="text-align: center;">
-I am also the founder of SkillsBoostHub, a platform
-focused on helping students build future-ready skills
-and achieve career success.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<div class="col-lg-12"
-data-aos="fade-left" style="text-align: center;">
-
-<div class="about-card">
-
-<section id="experience">
-
-<div class="container">
-
-<div class="section-header text-center">
-
-<h2 class="section-title">
-Experience Journey
-</h2>
-
-<div class="line"></div>
-
-<p class="experience-subtitle">
-My learning and professional journey so far
-</p>
-
-</div>
-
-<div class="experience-wrapper">
-
-<div class="experience-card">
-
-<div class="exp-icon">
-🎓
-</div>
-
-<h4>B.Tech CSE</h4>
-
-<h6>VR Siddhartha Engineering College</h6>
-
-<span>2022 - Present</span>
-
-<p>
-Pursuing Computer Science Engineering
-with focus on Software Development,
-Web Technologies and AI.
-</p>
-
-</div>
-
-<div class="experience-card">
-
-<div class="exp-icon">
-🚀
-</div>
-
-<h4>Techxelerate Hackathon</h4>
-
-<h6>BITS Pilani Hyderabad</h6>
-
-<span>2025</span>
-
-<p>
-Participated in innovation-based
-hackathon and startup ecosystem
-activities.
-</p>
-
-</div>
-
-<div class="experience-card">
-
-<div class="exp-icon">
-🤖
-</div>
-
-<h4>T-Hub / Tihan Program</h4>
-
-<h6>IIT Hyderabad</h6>
-
-<span>2024</span>
-
-<p>
-Worked with emerging technologies,
-innovation projects and AI concepts.
-</p>
-
-</div>
-
-<div class="experience-card">
-
-<div class="exp-icon">
-🌐
-</div>
-
-<h4>SkillsBoostHub</h4>
-
-<h6>Founder</h6>
-
-<span>2025 - Present</span>
-
-<p>
-Building a student-focused platform
-for career development and
-future-ready skills.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Skills -->
-
-<section id="skills">
-
-<div class="container">
-
-<div class="section-header"
-data-aos="fade-up">
-
-<h2 class="section-title">
-Technical Skills
-</h2>
-
-<div class="line"></div>
-
-</div>
-
-<div class="row g-4">
-
-<div class="col-md-3">
-<div class="skill-card" data-aos="zoom-in">
-<i class="fab fa-html5"></i>
-<h5>HTML5</h5>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-card" data-aos="zoom-in">
-<i class="fab fa-css3-alt"></i>
-<h5>CSS3</h5>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-card" data-aos="zoom-in">
-<i class="fab fa-js"></i>
-<h5>JavaScript</h5>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-card" data-aos="zoom-in">
-<i class="fab fa-bootstrap"></i>
-<h5>Bootstrap</h5>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-card" data-aos="zoom-in">
-<i class="fas fa-code"></i>
-<h5>ASP.NET MVC</h5>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-card" data-aos="zoom-in">
-<i class="fas fa-database"></i>
-<h5>SQL Server</h5>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-card" data-aos="zoom-in">
-<i class="fas fa-fire"></i>
-<h5>Firebase</h5>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-card" data-aos="zoom-in">
-<i class="fas fa-brain"></i>
-<h5>Machine Learning</h5>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Statistics -->
-
-<div class="section-header text-center">
-
-<h2 class="section-title">
-Achievements
-</h2>
-
-<div class="line"></div>
-
-</div>
-
-<section id="stats">
-
-<div class="container">
-
-<div class="row text-center">
-
-<div class="col-md-3">
-
-<div class="stat-box">
-
-<h2 class="counter"
-data-target="15">0</h2>
-
-<p>Projects</p>
-
-</div>
-
-</div>
-
-<div class="col-md-3">
-
-<div class="stat-box">
-
-<h2 class="counter"
-data-target="10">0</h2>
-
-<p>Skills</p>
-
-</div>
-
-</div>
-
-<div class="col-md-3">
-
-<div class="stat-box">
-
-<h2 class="counter"
-data-target="5">0</h2>
-
-<p>Certifications</p>
-
-</div>
-
-</div>
-
-<div class="col-md-3">
-
-<div class="stat-box">
-
-<h2 class="counter"
-data-target="100">0</h2>
-
-<p>Dedication %</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Projects -->
-
-<section id="projects">
-
-<div class="container">
-
-<div class="section-header">
-
-<h2 class="section-title">
-Projects
-</h2>
-
-<div class="line"></div>
-
-</div>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-
-<div class="project-card"
-data-aos="flip-left">
-
-<h4>SkillsBoostHub</h4>
-
-<p>
-Student Skill Development Platform
-with courses, mentorship and resources.
-</p>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="project-card"
-data-aos="flip-left">
-
-<h4>Online Banking System</h4>
-
-<p>
-ASP.NET MVC based banking application
-with secure authentication.
-</p>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="project-card"
-data-aos="flip-left">
-
-<h4>Disease Forecasting Dashboard</h4>
-
-<p>
-Machine Learning project for climate-sensitive disease prediction.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="container">
-
-<div class="section-header text-center">
-
-<h2 class="section-title">
-Contact Me
-</h2>
-
-<div class="line"></div>
-
-</div>
-
-<div class="contact-wrapper">
-
-<!-- Left Side -->
-
-<div class="contact-info">
-
-<h3>
-Let's Connect 🚀
-</h3>
-
-<div class="contact-item">
-<i class="fas fa-envelope"></i>
-<span>venky995982@gmail.com</span>
-</div>
-
-<div class="contact-item">
-<i class="fas fa-phone"></i>
-<span>+91 99598 26841</span>
-</div>
-
-<div class="contact-item">
-<i class="fas fa-location-dot"></i>
-<span>Vijayawada, Andhra Pradesh</span>
-</div>
-
-<div class="contact-social">
-
-<a href="https://github.com/Venky9959-code" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://www.linkedin.com/in/venky-banavathu-2377082a3" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-<a href="#">
-<i class="fab fa-instagram"></i>
-</a>
-
-</div>
-
-</div>
-
-<!-- Right Side -->
-
-<div class="contact-form">
-
-<form>
-
-<div class="contact-form">
-
-<form id="contactForm">
-
-<input
-type="text"
-placeholder="Your Name"
-class="form-control">
-
-<input
-type="email"
-placeholder="Your Email"
-class="form-control">
-
-<textarea
-placeholder="Write your message..."></textarea>
-
-<button
-type="submit"
-class="send-btn">
-
-Send Message 🚀
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</div>
-</div>
-
-<!-- Footer -->
-
-<footer>
-
-<div class="container text-center">
-
-<div class="footer-icons">
-
-<a href="https://github.com/Venky9959-code" target="_blank"><i class="fab fa-github"></i></a>
-<a href="https://www.linkedin.com/in/venky-banavathu-2377082a3" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.instgram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-
-</div>
-
-<p>
-© 2026 Banavathu Venkateswara Rao.
-All Rights Reserved.
-</p>
-
-</div>
-</footer>
-
-<!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<!-- JS -->
-<script src="./script.js"></script>
+        <p>
+            Copyright &copy; 2026
+        </p>
+    </footer>
 
 </body>
 </html>
