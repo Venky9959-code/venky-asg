@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Demo - Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="m-4">
+
+    <!-- Header -->
+    <header class="text-center mb-5">
+
+        <h1 class="display-4 fw-bold">
+            Welcome to HTML
+        </h1>
+
+        <nav class="fs-5">
+
+            <a href="#about" class="text-decoration-none me-3">
+                About
+            </a>
+
+            <a href="#table" class="text-decoration-none me-3">
+                Table
+            </a>
+
+            <a href="#form" class="text-decoration-none">
+                Form
+            </a>
+
+        </nav>
+
+    </header>
+
+    <hr>
+
+    <!-- Main -->
+    <main class="container">
+
+        <!-- About -->
+        <section id="about" class="text-primary mb-5">
+
+            <h2 class="text-dark border border-info border-3 rounded p-2 mb-3">
+                About HTML
+            </h2>
+
+            <p class="text-success">
+
+                HTML stands for
+                <strong>HyperText Markup Language</strong>.
+
+                It is used to create
+                <em>web pages</em>.
+
+            </p>
+
+            <p class="text-success">
+
+                You can use
+
+                <mark>highlighting</mark>,
+
+                <b>bold</b>,
+
+                <i>italic</i>,
+
+                H<sub>2</sub>O,
+
+                x<sup>2</sup>.
+
+            </p>
+
+            <blockquote class="blockquote">
+
+                HTML is the foundation of every website.
+
+            </blockquote>
+
+            <img src="image.jpg"
+                alt="Sample Image"
+                class="img-fluid rounded shadow mb-4"
+                width="250">
+
+            <figure class="text-center">
+
+                <img src="image.jpg"
+                    alt="Example"
+                    class="img-thumbnail"
+                    width="180">
+
+                <figcaption class="mt-2">
+
+                    Sample Figure Caption
+
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+        <!-- Lists -->
+        <section class="mb-5">
+
+            <h2 class="text-dark border border-info border-3 rounded p-2 mb-4">
+
+                Lists
+
+            </h2>
+
+            <h3>Unordered List</h3>
+
+            <ul class="list-group mb-4">
+
+                <li class="list-group-item">HTML</li>
+
+                <li class="list-group-item">CSS</li>
+
+                <li class="list-group-item">JavaScript</li>
+
+            </ul>
+
+            <h3>Ordered List</h3>
+
+            <ol class="list-group list-group-numbered mb-4">
+
+                <li class="list-group-item">Learn HTML</li>
+
+                <li class="list-group-item">Learn CSS</li>
+
+                <li class="list-group-item">Learn JavaScript</li>
+
+            </ol>
+
+            <h3>Description List</h3>
+
+            <dl>
+
+                <dt>HTML</dt>
+
+                <dd>Structure of Web Pages</dd>
+
+            </dl>
+
+        </section>
+
+        <!-- Table -->
+        <section id="table" class="mb-5">
+
+            <h2 class="text-dark border border-info border-3 rounded p-2 mb-3">
+
+                Student Table
+
+            </h2>
+
+            <table class="table table-bordered table-hover table-striped">
+
+                <caption>
+
+                    Student Data
+
+                </caption>
+
+                <thead class="table-dark">
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Age</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Venky</td>
+
+                        <td>20</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Akhil</td>
+
+                        <td>22</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Form -->
+        <section id="form" class="mb-5">
+
+            <h2 class="text-dark border border-info border-3 rounded p-2 mb-4">
+
+                Registration Form
+
+            </h2>
+
+            <form>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Name
+
+                    </label>
+
+                    <input type="text" class="form-control">
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Email
+
+                    </label>
+
+                    <input type="email" class="form-control">
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Message
+
+                    </label>
+
+                    <textarea rows="4" class="form-control"></textarea>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Course
+
+                    </label>
+
+                    <select class="form-select">
+
+                        <option>HTML</option>
+
+                        <option>CSS</option>
+
+                        <option>JavaScript</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-check mb-3">
+
+                    <input type="checkbox" class="form-check-input" id="terms">
+
+                    <label for="terms" class="form-check-label">
+
+                        Accept Terms
+
+                    </label>
+
+                </div>
+
+                <button class="btn btn-primary">
+
+                    Submit
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Media -->
+        <section class="mb-5">
+
+            <h2 class="text-dark border border-info border-3 rounded p-2 mb-4">
+
+                Media
+
+            </h2>
+
+            <audio controls class="w-100 mb-4">
+
+                <source src="audio.mp3" type="audio/mpeg">
+
+            </audio>
+
+            <video controls class="w-100 rounded shadow">
+
+                <source src="video.mp4" type="video/mp4">
+
+            </video>
+
+        </section>
+
+        <!-- Details -->
+        <section class="mb-5">
+
+            <details class="border rounded p-3">
+
+                <summary class="fw-bold">
+
+                    Click to read more
+
+                </summary>
+
+                <p class="text-success mt-3">
+
+                    This content is hidden until opened.
+
+                </p>
+
+            </details>
+
+        </section>
+
+        <!-- Aside -->
+        <aside class="bg-light shadow-sm rounded p-4 mb-5">
+
+            <h3>
+
+                Related Links
+
+            </h3>
+
+            <a href="#" class="btn btn-outline-primary">
+
+                HTML Tutorial
+
+            </a>
+
+        </aside>
+
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center rounded p-4">
+
+        <address class="mb-2">
+
+            Contact:
+            example@email.com
+
+        </address>
+
+        <p class="mb-0 text-white">
+
+            Copyright &copy; 2026
+
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
